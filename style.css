@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #181819;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#world {
+  width: calc(50px * 13);
+  width: max-content;
+  margin: 0 auto;
+}
+.pacman {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  animation: pacman-move 0.3s steps(1) infinite;
+}
+
+.wall {
+  width: 50px;
+  height: 50px;
+  background-image: url("wall.png");
+  display: inline-block;
+}
+
+.coin {
+  width: 50px;
+  height: 50px;
+  background-image: url("coin.png");
+  display: inline-block;
+}
+
+.ground {
+  width: 50px;
+  height: 50px;
+  background-image: url("bg.png");
+  display: inline-block;
+}
+
+.score-board {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  color: #4f0f0c;
+}
+#score {
+  color: #fff;
+}
+
+@keyframes pacman-move {
+  0% {
+    background-image: url("pacman.png");
+  }
+  50% {
+    background-image: url("pacman-close.png");
+  }
+}
